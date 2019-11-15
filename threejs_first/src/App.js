@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import Style from "styled-components";
+import Renderer from "./Components/Renderer";
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Renderer>
+      <H1>threejs</H1>
+    </Renderer>
   );
-}
-
-export default App;
+};
+const H1 = Style.h1`
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+  font-size: 7em;
+  text-transform: uppercase;
+  width: auto;
+  line-height: 0.8em;
+  border: 5px solid black;
+  padding: 0.2em;
+`;

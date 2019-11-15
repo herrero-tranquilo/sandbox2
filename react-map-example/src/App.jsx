@@ -1,21 +1,26 @@
 import React, { useState, useEffect, useCallback } from "react";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
 import * as park from "./data/park.json";
+import * as area from "./data/area.json";
+import * as code from "./data/code.json";
+import CodeIco from "./code.svg";
 import ParkIco from "./park.svg";
+import AreaIco from "./area.svg";
 function App() {
   const [viewport, setViewport] = useState({
-    latitude: 34.8,
-    longitude: 126.4,
+    latitude: 37.5531,
+    longitude: 126.9919,
     width: "100vw",
     height: "100vh",
-    zoom: 14
+    zoom: 12
   });
-  const [selectedPark, setSelectedPark] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState(null);
+  const [selectedCode, setSelectedCode] = useState(null);
   const handleKeyPress = useCallback(event => {
     const { key, keyCode } = event;
 
     if (keyCode === 27 && key === "Escape") {
-      setSelectedPark(null);
+      setSelectedPoint(null);
     }
   }, []);
   const _onResize = useCallback(() => {
@@ -54,22 +59,74 @@ function App() {
               className="marker-btn"
               onClick={e => {
                 e.preventDefault();
-                setSelectedPark(park);
+                setSelectedPoint(park);
               }}
             >
               <img src={ParkIco} alt="skate park icon"></img>
             </button>
           </Marker>
         ))}
-        i
-        {selectedPark ? (
-          <Popup
-            latitude={selectedPark.geometry.coordinates[1]}
-            longitude={selectedPark.geometry.coordinates[0]}
-            onClose={() => setSelectedPark(null)}
+        {area.features.map(area => (
+          <Marker
+            key={area.properties.PARK_ID}
+            latitude={area.geometry.coordinates[1]}
+            longitude={area.geometry.coordinates[0]}
           >
-            <h2>{selectedPark.properties.NAME}</h2>
-            <div>{selectedPark.properties.DESCRIPTIO}</div>
+            <button
+              className="marker-btn"
+              onClick={e => {
+                e.preventDefault();
+                setSelectedPoint(area);
+              }}
+            >
+              <img src={AreaIco} alt="skate park icon"></img>
+            </button>
+          </Marker>
+        ))}
+        {code.features.map(code => (
+          <Marker
+            key={code.properties.PARK_ID}
+            latitude={code.geometry.coordinates[1]}
+            longitude={code.geometry.coordinates[0]}
+          >
+            <button
+              className="marker-btn"
+              onClick={e => {
+                e.preventDefault();
+                setSelectedCode(code);
+              }}
+            >
+              <img src={CodeIco} alt="skate park icon"></img>
+            </button>
+          </Marker>
+        ))}
+        {selectedPoint ? (
+          <Popup
+            latitude={selectedPoint.geometry.coordinates[1]}
+            longitude={selectedPoint.geometry.coordinates[0]}
+            onClose={() => setSelectedPoint(null)}
+          >
+            <h2>{selectedPoint.properties.NAME}</h2>
+            <div>{selectedPoint.properties.DESCRIPTIO}</div>
+            <div>{selectedPoint.properties.NUM_SUBWAY}</div>
+          </Popup>
+        ) : null}
+        {selectedCode ? (
+          <Popup
+            latitude={selectedCode.geometry.coordinates[1]}
+            longitude={selectedCode.geometry.coordinates[0]}
+            onClose={() => setSelectedCode(null)}
+          >
+            <h2>{selectedCode.properties.NAME}</h2>
+            <div>{selectedCode.properties.ADDRESS}</div>
+            <div>{selectedCode.properties.SUBWAY}</div>
+            <div>{selectedCode.properties.TIME}</div>
+            <div>{selectedCode.properties.SALARY}</div>
+            <ul>
+              {selectedCode.properties.NOTES.map(low => (
+                <li>{low}</li>
+              ))}
+            </ul>
           </Popup>
         ) : null}
       </ReactMapGl>
