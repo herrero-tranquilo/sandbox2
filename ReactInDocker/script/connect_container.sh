@@ -1,0 +1,1 @@
+docker exec -it reactindocker-container bash
