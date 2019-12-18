@@ -1,0 +1,1 @@
+docker exec -it docker_db_container bash
