@@ -119,3 +119,5 @@
     - 모든 seed 실행 => sequelize db:seed:all
 
 - sqlite 확인
+
+##### "Get /user"
