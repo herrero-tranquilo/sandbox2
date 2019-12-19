@@ -13,7 +13,9 @@
 
 - rm -rf public views
 - npm uninstall jade
-- app.js [ delete ]
+- app.js
+
+  - [ delete ]
 
   ```javascript
   // view engine setup
@@ -23,6 +25,18 @@
   ...
   app.use(express.static(path.join(__dirname, "public")));
   ```
+
+  - [ modify ]
+
+    ```javascript
+    res.render("error");
+    ```
+
+    - to
+
+    ```javascript
+    res.json({ error: err });
+    ```
 
 - routes/index.js [ modify ]
 
@@ -38,3 +52,32 @@
 
 - npm run start
 - http://localhost:3000/ 확인
+
+##### "nodemon 설치"
+
+- mkdir src
+- mv ./routes ./src
+- npm install -D nodemon
+- touch nodemon.json
+
+  ```javascript
+    {
+    "watch": ["./src"]
+    }
+  ```
+
+- app.js [ modify ]
+
+```javascript
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
+```
+
+    - to
+
+        ```javascript
+        var indexRouter = require("./src/routes/index");
+        var usersRouter = require("./src/routes/users");
+        ```
+
+- npm run start
