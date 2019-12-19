@@ -68,16 +68,16 @@
 
 - app.js [ modify ]
 
-```javascript
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-```
+  ```javascript
+  var indexRouter = require("./routes/index");
+  var usersRouter = require("./routes/users");
+  ```
 
-    - to
+  - to
 
-        ```javascript
-        var indexRouter = require("./src/routes/index");
-        var usersRouter = require("./src/routes/users");
-        ```
+    ```javascript
+    var indexRouter = require("./src/routes/index");
+    var usersRouter = require("./src/routes/users");
+    ```
 
 - npm run start
