@@ -83,3 +83,12 @@
 - npm run start
 
 ##### "구조 정리"
+
+##### "sequelize + sqlite3"
+
+- npm install sequelize sqlite3
+- cd src
+- npx sequelize-cli init
+- sequelize model:generate --name User --attributes userId:string,name:string,engName:string
+- sequelize db:migrate
+- sqlite 확인
