@@ -1,0 +1,6 @@
+- npm -g install express-generator
+- npm -g list --depth=0
+- mkdir sample_express
+- cd sample_express
+- express -f .
+- npm i
