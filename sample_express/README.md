@@ -121,3 +121,5 @@
 - sqlite 확인
 
 ##### "Get /user"
+
+##### "Post /user"

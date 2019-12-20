@@ -7,5 +7,10 @@ router.get("/", function(req, res, next) {
     .then(_ => res.status(200).json(_))
     .catch(err => console.log(err));
 });
-
+router.post("/", function(req, res, next) {
+  const { body } = req;
+  UserCrl.addUsers(body)
+    .then(_ => res.status(201).json(_))
+    .catch(err => console.log(err));
+});
 module.exports = router;
