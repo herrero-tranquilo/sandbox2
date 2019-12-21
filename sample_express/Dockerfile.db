@@ -2,4 +2,8 @@ FROM postgres:12
 
 ADD ./bin/create.sql /docker-entrypoint-initdb.d/
 
+# pacakges
+RUN apt-get update
+RUN apt-get -y install vim
+
 EXPOSE 5432

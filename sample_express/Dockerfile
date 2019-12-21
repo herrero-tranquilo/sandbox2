@@ -14,4 +14,6 @@ COPY /bin/  /home/service/bin/
 
 COPY /app.js  /home/service/app.js
 
+ENV NODE_ENV=production
+
 ENTRYPOINT [ "npm", "run", "start" ]

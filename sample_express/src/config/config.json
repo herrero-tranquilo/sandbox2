@@ -1,17 +1,26 @@
 {
   "development": {
     "dialect": "postgres",
-    "host": "127.0.0.1:5432",
-    "database": "",
-    "username": "",
-    "password": ""
+    "host": "localhost",
+    "port": "5432",
+    "database": "sample_node_db",
+    "username": "sample_node_user",
+    "password": "sample_node_pw"
   },
   "test": {
-    "dialect": "sqlite",
-    "storage": "F://개발폴더/Repositoris/SampleProjects/sample_express/database.sqlite"
+    "dialect": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "database": "sample_node_db",
+    "username": "sample_node_user",
+    "password": "sample_node_pw"
   },
   "production": {
-    "dialect": "sqlite",
-    "storage": "F://개발폴더/Repositoris/SampleProjects/sample_express/database.sqlite"
+    "dialect": "postgres",
+    "host": "dev_node_sample_db_container",
+    "port": "5432",
+    "database": "sample_node_db",
+    "username": "sample_node_user",
+    "password": "sample_node_pw"
   }
 }

@@ -86,9 +86,10 @@
 
 ##### "sequelize + sqlite3"
 
-- npm install sequelize sqlite3
+- npm install sqlite3
+- npm install -g sequelize-cli
 - cd src
-- npx sequelize-cli init
+- sequelize init
 - sequelize model:generate --name User --attributes userId:string,name:string,engName:string
 - sequelize db:migrate
 
@@ -123,3 +124,20 @@
 ##### "Get /user"
 
 ##### "Post /user"
+
+#### db 컨테이너 마운트 후
+
+- docker exec -it container_name bash
+
+- su postgres
+
+- cd ~/
+- cd data
+- vi postgresql.conf
+- :/logging_collector
+
+- logging_collector = on
+- log_directory= '/logs'
+- log_filename= 'postgresql.log'
+
+#### Postgresql - Express 컨테이너간 연결 GET /user
