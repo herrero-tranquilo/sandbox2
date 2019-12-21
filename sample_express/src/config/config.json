@@ -1,7 +1,10 @@
 {
   "development": {
-    "dialect": "sqlite",
-    "storage": "F://개발폴더/Repositoris/SampleProjects/sample_express/database.sqlite"
+    "dialect": "postgres",
+    "host": "127.0.0.1:5432",
+    "database": "",
+    "username": "",
+    "password": ""
   },
   "test": {
     "dialect": "sqlite",
