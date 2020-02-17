@@ -22,9 +22,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Change Dir
-        working-directory: ./react-typescript
       - name: Install dependencies
+        working-directory: ./react-typescript
         run: yarn install
       - name: Build
+        working-directory: ./react-typescript
         run: yarn build
