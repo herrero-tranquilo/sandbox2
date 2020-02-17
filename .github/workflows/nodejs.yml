@@ -25,4 +25,4 @@ jobs:
       - name: Change Dir | Install dependencies | Build
         working-directory: ./react-typescript
         run: yarn install |
-          yarn Build
+          yarn build
