@@ -1,4 +1,4 @@
-From node:latest
+FROM node:latest
 WORKDIR /home/service/
 RUN apt-get update
 COPY ./package.json /home/service/package.json
