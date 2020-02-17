@@ -1,5 +1,4 @@
-name: Node.js CI
-
+name: Node.js Build
 on:
   push:
     branches:
@@ -10,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: build
+    name: Build
     runs-on: ubuntu-16.04
 
     strategy:
