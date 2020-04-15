@@ -27,9 +27,9 @@ jobs:
         working-directory: ./nest-sample
         run: yarn install
 
-      - name: Start
+      - name: Test
         working-directory: ./nest-sample
-        run: yarn start
+        run: yarn test
 
       - name: Install dependencies
         working-directory: ./react-typescript-sample
