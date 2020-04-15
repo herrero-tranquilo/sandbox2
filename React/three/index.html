@@ -28,7 +28,7 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-      }); //리사이즈이벤트는 쓰로틀링하기
+      });
 
       var raycaster = new THREE.Raycaster();
       var mouse = new THREE.Vector2();
@@ -58,11 +58,11 @@
       light.position.set(0, 0, 15);
       scene.add(light);
 
-      var render = function() {
+      var render = function () {
         requestAnimationFrame(render);
 
         renderer.render(scene, camera);
-      }; //리사이즈이벤트는 쓰로틀링하기
+      };
 
       function onMouseMove(e) {
         e.preventDefault();
@@ -74,22 +74,22 @@
           this.tl = new TimelineMax();
           this.tl.to(intersects[i].object.scale, 1, {
             x: 2,
-            ease: Expo.easeOut
+            ease: Expo.easeOut,
           });
           this.tl.to(intersects[i].object.scale, 0.5, {
             x: 0.5,
-            ease: Expo.easeOut
+            ease: Expo.easeOut,
           });
           this.tl.to(intersects[i].object.position, 0.5, {
             x: 2,
-            ease: Expo.easeOut
+            ease: Expo.easeOut,
           });
           this.tl.to(
             intersects[i].object.rotation,
             0.5,
             {
               y: Math.PI * 0.5,
-              ease: Expo.easeOut
+              ease: Expo.easeOut,
             },
             "=-1.5"
           );

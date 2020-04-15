@@ -22,9 +22,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
-        working-directory: ./react-typescript
+        working-directory: ./nest-sample
         run: yarn install
+
+      - name: Start
+        working-directory: ./nest-sample
+        run: yarn start
+
+      - name: Install dependencies
+        working-directory: ./react-typescript-sample
+        run: yarn install
+
       - name: Build
-        working-directory: ./react-typescript
+        working-directory: ./react-typescript-sample
         run: yarn build
