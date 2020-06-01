@@ -1,11 +1,13 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
+const precessMessage = require('../../hooks/precess-message');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
     find: [],
     get: [],
-    create: [],
+    create: [precessMessage()],
     update: [],
     patch: [],
     remove: []

@@ -29,3 +29,9 @@ feathers generate service
         password
     });
 ```
+
+- [x] 훅 생성
+
+```bash
+feathers generate hook
+```
