@@ -14,3 +14,18 @@ feathers generate app
 ```
 feathers generate service
 ```
+
+```javascript
+    const socket = io("http://localhost:3030");
+    const app = feathers();
+
+    app.configure(feathers.socketio(socket));
+
+    ...
+    app.service("users").create({
+        email,
+        name,
+        githubId,
+        password
+    });
+```
