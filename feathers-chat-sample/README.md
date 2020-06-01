@@ -8,3 +8,9 @@ cd feathers-chat-sample/
 feathers generate app
 
 ```
+
+#### [x] 서비스 생성
+
+```
+feathers generate service
+```
