@@ -1,4 +1,4 @@
-#### [x] 앱 생성
+#### [X] 앱 생성
 
 ```
 npm install @feathersjs/cli -g
@@ -9,7 +9,7 @@ feathers generate app
 
 ```
 
-#### [x] 서비스 생성
+#### [X] 서비스 생성
 
 ```
 feathers generate service
