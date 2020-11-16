@@ -1,0 +1,18 @@
+{
+  "name": "vue-nuxt-monorepo-sample",
+  "version": "1.0.0",
+  "description": "vue & nuxt & storybook monorepo sample",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "kimyongkuk",
+  "license": "ISC",
+  "private": true,
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["**/**"]
+  }
+}

@@ -1,0 +1,55 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\k0603\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\k0603\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\MinGW\bin;C:\Users\k0603\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\nodejs;C:\Users\k0603\AppData\Roaming\npm\node_modules;C:\Users\k0603\AppData\Roaming\npm;C:\Users\k0603\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin;C:\Program Files\Java\jdk1.8.0_241\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\fanding\Apache24\bin;C:\fanding\php7;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Users\k0603\.cargo\bin;C:\Users\k0603\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\k0603\AppData\Local\Programs\Python\Python38-32;C:\Users\k0603\AppData\Local\Microsoft\WindowsApps;C:\Users\k0603\AppData\Roaming\npm;C:\Users\k0603\AppData\Local\GitHubDesktop\bin;C:\Users\k0603\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm 2019.2.5\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3\bin;%IntelliJ IDEA Community Edition%;C:\Users\k0603\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\k0603\AppData\Roaming\Composer\vendor\bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: F:\DevDirectory\Repositoris\Project\SampleProjects\vue-nuxt-monorepo-sample\packages\client-user\package.json: Unexpected token } in JSON at position 464
+      at JSON.parse (<anonymous>)
+      at C:\Users\k0603\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\k0603\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\k0603\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@vue-nuxt-monorepo-sample/client-user",
+    "version": "1.0.0",
+    "description": "vue-nuxt-monorepo-sample/client-user",
+    "author": "kimyongkuk <k0603156@gmail.com>",
+    "private": true,
+    "scripts": {
+      "dev": "nuxt",
+      "build": "nuxt build",
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+      "precommit": "npm run lint"
+    },
+    "dependencies": {
+      "nuxt": "^2.0.0",
+    },
+    "devDependencies": {
+      "babel-eslint": "^10.0.1",
+      "eslint": "^4.19.1",
+      "eslint-friendly-formatter": "^4.0.1",
+      "eslint-loader": "^2.1.1",
+      "eslint-plugin-vue": "^4.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
