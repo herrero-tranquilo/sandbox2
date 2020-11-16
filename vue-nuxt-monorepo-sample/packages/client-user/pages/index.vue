@@ -25,7 +25,7 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-import Hello from '@vue-nuxt-monorepo-sample/client-core'
+import Hello from 'client-core'
 export default {
   components: {
     AppLogo,

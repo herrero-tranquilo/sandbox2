@@ -3,16 +3,26 @@
   "version": "1.0.0",
   "description": "vue & nuxt & storybook monorepo sample",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {
-    "test": "test"
-  },
   "author": "kimyongkuk",
   "license": "ISC",
   "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "ws:info": "yarn workspaces info",
+    "dev:admin": "yarn workspace client-admin serve",
+    "dev:user": "yarn workspace client-user dev",
+    "build:core": "yarn workspace client-core build:lib"
+  },
   "workspaces": {
     "packages": ["packages/*"],
-    "nohoist": ["**/**"]
+    "nohoist": [
+      "**/client-admin",
+      "**/client-admin/**",
+      "**/client-core",
+      "**/client-core/**",
+      "**/client-user",
+      "**/client-user/**"
+    ]
   }
 }

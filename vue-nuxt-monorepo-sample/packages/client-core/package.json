@@ -1,6 +1,6 @@
 {
-  "name": "@vue-nuxt-monorepo-sample/client-core",
-  "version": "0.1.1",
+  "name": "client-core",
+  "version": "0.0.1-alpha",
   "private": true,
   "main": "./dist/client-core.common.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "peerDependencies": {
   },
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "env": {
       "node": true
     },
@@ -36,7 +36,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off",
+      "no-unexpected-multiline": "off"
+    }
   },
   "browserslist": [
     "> 1%",

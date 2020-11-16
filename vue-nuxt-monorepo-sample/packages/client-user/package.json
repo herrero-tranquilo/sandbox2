@@ -1,5 +1,5 @@
 {
-  "name": "@vue-nuxt-monorepo-sample/client-user",
+  "name": "client-user",
   "version": "1.0.0",
   "description": "vue-nuxt-monorepo-sample/client-user",
   "author": "kimyongkuk <k0603156@gmail.com>",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "@vue-nuxt-monorepo-sample/client-core": "file:../client-core"
+    "client-core": "^0.0.1-alpha"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
