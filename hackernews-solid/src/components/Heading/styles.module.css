@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+}
+.header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.header span {
+  margin-left: 1rem;
+}

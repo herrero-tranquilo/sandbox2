@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+}
+.header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.header span {
+  margin-left: 1rem;
+}
+.time {
+  margin: 0.4rem 0;
+  font-size: 1.2rem;
+}
+.text {
+  margin: 1.2rem 0;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.url {
+  margin: 1.2rem 0;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.descendants {
+  margin: 1.2rem 0;
+  font-size: 1.2rem;
+}
+.endline {
+  margin: 4rem 0 0 0;
+}
+.kids {
+  margin: 2rem 0 0 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.kids li + li {
+  margin-top: 0.6rem;
+}
