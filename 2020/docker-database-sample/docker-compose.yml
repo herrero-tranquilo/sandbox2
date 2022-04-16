@@ -1,0 +1,16 @@
+version: "3"
+services:
+  test_db:
+    build:
+      context: .
+    restart: unless-stopped
+    container_name: test_db_container
+    ports:
+      - "25432:5432"
+    volumes:
+      - f:/pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=db
+      - PGDATA=/tmp

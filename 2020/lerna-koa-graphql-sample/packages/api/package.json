@@ -1,0 +1,26 @@
+{
+  "name": "@lerna-koa-graphql-sample/api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/graphql-api-koa": "^2.0.2",
+    "@types/koa": "^2.11.3",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__router": "^8.0.2",
+    "@types/node": "^13.13.5",
+    "nodemon": "^2.0.3",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.ts"
+  },
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "graphql": "^15.0.0",
+    "graphql-api-koa": "^4.1.2",
+    "graphql-tools": "^4",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0"
+  }
+}

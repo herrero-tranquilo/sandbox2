@@ -1,0 +1,42 @@
+{
+  "name": "lerna-koa-graphql-sample",
+  "private": true,
+  "version": "1.0.0",
+  "description": "lerna-koa-graphql-sample",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k0603156/SampleProjects"
+  },
+  "keywords": [
+    "Graphql"
+  ],
+  "author": "kimyongkuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k0603156/SampleProjects/issues"
+  },
+  "homepage": "https://github.com/k0603156/SampleProjects#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "lerna": "^3.20.2",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  }
+}

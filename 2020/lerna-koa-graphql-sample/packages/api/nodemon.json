@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "ignore": [],
+  "execMap": {
+    "ts": "ts-node"
+  }
+}

@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: black;
+}
+.nav__brand {
+  width: 12rem;
+  padding: 0.2rem 0.3rem;
+  line-height: 1.6rem;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+.nav ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+.nav ul li + li {
+  margin-left: 1rem;
+  color: beige;
+}
+
+.nav ul li a[aria-current="page"] {
+  font-weight: bold;
+  color: white;
+}
