@@ -1,0 +1,10 @@
+FROM node:latest
+WORKDIR /home/service/
+RUN apt-get update
+COPY ./package.json /home/service/package.json
+COPY ./yarn.lock /home/service/yarn.lock
+COPY ./public/ /home/service/public/
+COPY ./src/ /home/service/src/
+RUN npm i
+EXPOSE 3000
+CMD ["npm","run-script", "start"]
