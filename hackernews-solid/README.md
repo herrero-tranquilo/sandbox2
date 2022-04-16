@@ -2,6 +2,12 @@ hacker news - solidjs
 
 # 해커뉴스
 
+## Description
+
+Solid.js를 간단하게 사용해 보기 위한 해커뉴스 예제
+
+[Solid.js link](https://www.solidjs.com/docs/latest/api)
+
 ### packages
 
 ```json
